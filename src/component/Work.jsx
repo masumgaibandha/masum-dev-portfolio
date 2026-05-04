@@ -35,15 +35,15 @@ const Work = ({ isDarkMode }) => {
         transition={{ delay: 0.7, duration: 0.5 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
       >
-        Welcome to my web development portfolio! Explore a collection of
-        projects showcasing my expertise in front-end development.
+        Explore my real-world projects built with React, Next.js, Node.js,
+        MongoDB & Firebase — all deployed and live.
       </motion.p>
 
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.9, duration: 0.6 }}
-        className=" grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-5 my-10 dark:text-black"
+        className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-5 my-10 dark:text-black"
       >
         {workData.map((project, index) => (
           <motion.div
@@ -59,19 +59,26 @@ const Work = ({ isDarkMode }) => {
                 <p className="text-sm text-gray-700">{project.description}</p>
               </div>
 
-              <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+              
+               <a href={project.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition"
+              >
                 <Image src={assets.send_icon} alt="Send icon" className="w-5" />
-              </div>
+              </a>
             </div>
           </motion.div>
         ))}
       </motion.div>
+
       <motion.a
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 1.1, duration: 0.5 }}
-
-        href=""
+        href="https://github.com/masumgaibandha"
+        target="_blank"
+        rel="noopener noreferrer"
         className="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover"
       >
         Show more{" "}

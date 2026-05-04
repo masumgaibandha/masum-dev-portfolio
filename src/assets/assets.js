@@ -36,6 +36,7 @@ import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 
+
 export const assets = {
     user_image,
     code_icon,
@@ -77,41 +78,88 @@ export const assets = {
 };
 
 export const workData = [
-    {
-        title: 'Frontend project',
-        description: 'Web Design',
-        bgImage: '/work-1.png',
-    },
-    {
-        title: 'Geo based app',
-        description: 'Mobile App',
-        bgImage: '/work-2.png',
-    },
-    {
-        title: 'Photography site',
-        description: 'Web Design',
-        bgImage: '/work-3.png',
-    },
-    {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
-        bgImage: '/work-4.png',
-    },
+  {
+    title: 'Keen Keeper',
+    description: 'Full-Stack App',
+    bgImage: '/work-1.png',
+    liveLink: 'https://keen-keeper-f3ks.vercel.app/',
+    gitLink: 'https://github.com/masumgaibandha/keen-keeper',
+  },
+  {
+    title: 'Asset Verse',
+    description: 'Full-Stack App',
+    bgImage: '/work-2.png',
+    liveLink: 'https://asset-verse-b5fc2.web.app/',
+    gitLink: 'https://github.com/masumgaibandha/asset-verse-server',
+  },
+  {
+    title: 'Tile Vista',
+    description: 'Full-Stack App',
+    bgImage: '/work-3.png',
+    liveLink: 'https://tile-vista.vercel.app/',
+    gitLink: 'https://github.com/masumgaibandha/tile-vista',
+  },
+  {
+    title: 'English Janala',
+    description: 'Frontend App',
+    bgImage: '/work-4.png',
+    liveLink: 'https://english-janala-masum.netlify.app/',
+    gitLink: 'https://github.com/masumgaibandha/english-janala',
+  },
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+  {
+    icon: assets.web_icon,
+    title: 'Full-Stack Web Development',
+    description: 'End-to-end web apps built with React, Next.js, Node.js, Express & MongoDB — fast, scalable and production-ready.',
+    link: ''
+  },
+  {
+    icon: assets.mobile_icon,
+    title: 'Frontend Development',
+    description: 'Pixel-perfect, responsive UIs built with React, Next.js and Tailwind CSS with smooth animations and great UX.',
+    link: ''
+  },
+  {
+    icon: assets.ui_icon,
+    title: 'Backend & API Development',
+    description: 'Robust REST APIs, authentication systems and database design using Node.js, Express, MongoDB and Firebase.',
+    link: ''
+  },
+  {
+    icon: assets.graphics_icon,
+    title: 'Cold Email Outreach & Lead Generation',
+    description: 'B2B cold email campaigns with verified lead lists, inbox setup, deliverability optimization and 8–15% reply rates.',
+    link: ''
+  },
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
+  {
+    icon: assets.code_icon,
+    iconDark: assets.code_icon_dark,
+    title: 'Languages & Skills',
+    description: 'HTML, CSS, Tailwind, JavaScript, React, Next.js, Node.js, Express, MongoDB, Firebase, Better Auth'
+  },
+  {
+    icon: assets.edu_icon,
+    iconDark: assets.edu_icon_dark,
+    title: 'Education',
+    description: 'University of Dhaka — Master of Education (MEd), 2023–2024'
+  },
+  {
+    icon: assets.project_icon,
+    iconDark: assets.project_icon_dark,
+    title: 'Projects',
+    description: 'Built & deployed 15+ projects on Vercel, Netlify & GitHub'
+  },
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+  assets.vscode,
+  assets.firebase,
+  assets.mongodb,
+  assets.figma,
+  assets.git,
 ];

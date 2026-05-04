@@ -11,7 +11,7 @@ const Contact = ({ isDarkMode }) => {
     event.preventDefault();
     setResult("Sending....");
     const formData = new FormData(event.target);
-    formData.append("access_key", "318f2695-32f1-47be-9678-e45687a9bd23");
+    formData.append("access_key", "ff29de42-f85b-4954-a053-dbecf9f0aac1");
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: formData,
@@ -38,7 +38,7 @@ const Contact = ({ isDarkMode }) => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="contact"
-      className="w-full px-[12%] py-10 scroll-mt-20 container mx-auto "
+      className="w-full px-[12%] py-10 scroll-mt-20 container mx-auto"
       style={{
         backgroundImage: isDarkMode ? "none" : "url('/footer-bg-color.png')",
         backgroundRepeat: "no-repeat",
@@ -70,8 +70,8 @@ const Contact = ({ isDarkMode }) => {
         transition={{ delay: 0.7, duration: 0.5 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
       >
-        I'd love to hear from you! If you have any questions, comments, or
-        feedback, please use the form below.
+        Have a project in mind, need a full-stack web app, or want to discuss
+        a cold email campaign? I am available and ready to help — let&apos;s talk!
       </motion.p>
 
       <motion.form
@@ -118,9 +118,8 @@ const Contact = ({ isDarkMode }) => {
           }`}
         ></motion.textarea>
         <motion.button
-          initial={{ scale: 1.05}}
-          transition={{duration: 0.3 }}
-
+          initial={{ scale: 1.05 }}
+          transition={{ duration: 0.3 }}
           type="submit"
           className="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 cursor-pointer dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover"
         >

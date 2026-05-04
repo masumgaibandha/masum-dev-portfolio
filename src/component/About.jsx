@@ -53,10 +53,14 @@ const About = ({ isDarkMode }) => {
           className="flex-1"
         >
           <p className="mb-10 max-w-2xl font-Ovo">
-            I am experience Frontend Developer with over a decade of
-            professional expertise in the field. Throughout my career, I have
-            had the privilege of collaborating with prestigious organizations,
-            contributing to their success and growth.
+            I am a Full-Stack Web Developer from Gaibandha, Bangladesh, 
+            passionate about building fast, modern, and scalable web 
+            applications. I work with React, Next.js, Node.js, Express, 
+            MongoDB, and Firebase — and I have successfully built and deployed 
+            15+ projects on Vercel, Netlify, and GitHub. Alongside web 
+            development, I also specialize in B2B cold email outreach and lead 
+            generation with 10+ years of experience on Upwork as a Top Rated 
+            freelancer.
           </p>
 
           <motion.ul
@@ -96,14 +100,12 @@ const About = ({ isDarkMode }) => {
           <motion.ul
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{delay: 1.5, duration: 0.6 }}
-
+            transition={{ delay: 1.5, duration: 0.6 }}
             className="flex items-center gap-3 sm:gap-5"
           >
             {toolsData.map((tool, index) => (
               <motion.li
-            whileInView={{ scale: 1.1 }}
-
+                whileInView={{ scale: 1.1 }}
                 key={index}
                 className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-xl cursor-pointer hover:-translate-y-1 duration-500"
               >
