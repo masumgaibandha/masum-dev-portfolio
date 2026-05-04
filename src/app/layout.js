@@ -16,6 +16,9 @@ const ovo = Ovo({
 export const metadata = {
   title: "Masum Dev | Full Stack Developer & Growth Specialist",
   description: "I build web apps and help businesses generate leads through cold email outreach.",
+  icons: {
+    icon: "/favicon.ico", // or "/favicon.ico"
+  },
 };
 
 export default function RootLayout({ children }) {
