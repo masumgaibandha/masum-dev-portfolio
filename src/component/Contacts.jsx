@@ -1,4 +1,5 @@
 "use client";
+
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -9,20 +10,27 @@ const Contact = ({ isDarkMode }) => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    setResult("Sending....");
-    const formData = new FormData(event.target);
-    formData.append("access_key", "ff29de42-f85b-4954-a053-dbecf9f0aac1");
+    setResult("Sending...");
+
+    const formData = new FormData(event.currentTarget);
+
+    formData.append(
+      "access_key",
+      process.env.NEXT_PUBLIC_WEB3FORMS_KEY
+    );
+
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: formData,
     });
+
     const data = await response.json();
+
     if (data.success) {
-      setResult("Form Submitted Successfully");
-      event.target.reset();
+      setResult("Message sent successfully.");
+      event.currentTarget.reset();
     } else {
-      console.log("Error", data);
-      setResult(data.message);
+      setResult("Something went wrong. Please try again.");
     }
   };
 
@@ -44,7 +52,6 @@ const Contact = ({ isDarkMode }) => {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundSize: "90% auto",
-        backgroundColor: isDarkMode ? "" : "transparent",
       }}
     >
       <motion.h4
@@ -55,6 +62,7 @@ const Contact = ({ isDarkMode }) => {
       >
         Connect with me
       </motion.h4>
+
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -81,6 +89,8 @@ const Contact = ({ isDarkMode }) => {
         onSubmit={onSubmit}
         className="max-w-2xl mx-auto"
       >
+        <input type="checkbox" name="botcheck" className="hidden" />
+
         <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6 mt-10 mb-8">
           <motion.input
             initial={{ x: -50, opacity: 0 }}
@@ -92,6 +102,7 @@ const Contact = ({ isDarkMode }) => {
             required
             className={inputClass}
           />
+
           <motion.input
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -103,6 +114,7 @@ const Contact = ({ isDarkMode }) => {
             className={inputClass}
           />
         </div>
+
         <motion.textarea
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -113,24 +125,26 @@ const Contact = ({ isDarkMode }) => {
           required
           className={`w-full p-4 outline-none border-[0.5px] rounded-md mb-6 ${
             isDarkMode
-              ? "dark:bg-darkHover/30 dark:border-white/90"
+              ? "bg-darkHover/30 border-white/90 text-white placeholder-gray-300"
               : "border-gray-400 bg-white text-gray-800"
           }`}
-        ></motion.textarea>
+        />
+
         <motion.button
-          initial={{ scale: 1.05 }}
+          whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
           type="submit"
           className="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 cursor-pointer dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover"
         >
-          Submit now{" "}
+          Submit now
           <Image
             src={assets.right_arrow_white}
             alt="Right arrow white"
             className="w-4"
           />
         </motion.button>
-        <p className="mt-4">{result}</p>
+
+        <p className="mt-4 text-center">{result}</p>
       </motion.form>
     </motion.div>
   );

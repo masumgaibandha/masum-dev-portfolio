@@ -1,6 +1,7 @@
 'use client'
 import About from "@/component/About";
-import Contact from "@/component/Contact";
+import Contact from "@/component/Contacts";
+// import Contact from "@/component/Contact";
 import Footer from "@/component/Footer";
 import Header from "@/component/Header";
 import Navbar from "@/component/Navbar";
@@ -39,6 +40,7 @@ export default function Home() {
       <About isDarkMode={isDarkMode}/>
       <Services isDarkMode={isDarkMode}/>
       <Work isDarkMode={isDarkMode}/>
+         {/* <Contact isDarkMode={isDarkMode} /> */}
       <Contact isDarkMode={isDarkMode}/>
       <Footer isDarkMode={isDarkMode}/>
     </>
