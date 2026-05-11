@@ -18,6 +18,10 @@ const Contact = ({ isDarkMode }) => {
       "access_key",
       process.env.NEXT_PUBLIC_WEB3FORMS_KEY
     );
+    formData.append(
+  "access_key",
+  "1677b2cb-86aa-4cec-b61f-d9f9f1004ed9"
+);
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
