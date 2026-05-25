@@ -75,8 +75,8 @@ const Contact = ({ isDarkMode }) => {
         transition={{ delay: 0.7, duration: 0.5 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
       >
-        Have a project in mind, need a full-stack web app, or want to discuss
-        a cold email campaign? I am available and ready to help — let&apos;s talk!
+        Have a project in mind, need a full-stack web app, or want to discuss a
+        cold email campaign? I am available and ready to help — let&apos;s talk!
       </motion.p>
 
       <motion.form
