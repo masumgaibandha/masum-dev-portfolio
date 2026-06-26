@@ -1,4 +1,4 @@
-import ContactForm from "@/components/contact/ContactForm";
+import ContactForm from "@/component/contact/ContactForm";
 import { HiMail, HiSparkles } from "react-icons/hi";
 
 export const metadata = {
