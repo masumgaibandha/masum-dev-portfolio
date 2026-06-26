@@ -15,7 +15,7 @@ export default function Home() {
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     const systemDark = window.matchMedia(
-      "(prefers-color-scheme: dark)",
+      "(prefers-color-scheme: dark)"
     ).matches;
 
     if (savedTheme === "dark" || (!savedTheme && systemDark)) {
@@ -48,8 +48,8 @@ export default function Home() {
           <h4 className="mb-2 text-lg font-Ovo">Connect with me</h4>
           <h2 className="text-5xl font-Ovo">Get in touch</h2>
           <p className="mx-auto mt-5 mb-12 max-w-2xl font-Ovo">
-            Have a web application, SaaS platform, dashboard, or marketplace in
-            mind? Share your project details and I&apos;ll get back to you.
+            Have a project in mind, need a full-stack web app, or want to
+            discuss a cold email campaign? I am available and ready to help.
           </p>
         </div>
 
