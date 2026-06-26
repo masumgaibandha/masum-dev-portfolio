@@ -17,29 +17,27 @@ const ContactForm = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
 
-    setStatus({
-      loading: true,
-      message: "",
-      success: false,
-    });
+    setStatus({ loading: true, message: "", success: false });
 
     const form = event.currentTarget;
     const formData = new FormData(form);
 
-    const payload = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      subject: formData.get("subject"),
-      message: formData.get("message"),
-    };
-
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Accept: "application/json",
         },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+          name: formData.get("name"),
+          email: formData.get("email"),
+          subject:
+            formData.get("subject") || "New message from MasumDev website",
+          message: formData.get("message"),
+          from_name: "MasumDev Portfolio",
+        }),
       });
 
       const data = await response.json();
