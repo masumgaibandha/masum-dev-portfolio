@@ -1,55 +1,72 @@
+"use client";
+
 import { assets } from "@/assets/assets";
 import Image from "next/image";
-import React from "react";
 import { motion } from "motion/react";
 
 const Header = () => {
   return (
-    <div className="w-11/12 mx-auto max-w-3xl text-center h-screen flex flex-col items-center justify-center gap-4">
+    <div className="mx-auto flex h-screen w-11/12 max-w-4xl flex-col items-center justify-center gap-4 text-center">
       <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
       >
-        <Image src={assets.profile_img} alt="" className="rounded-full w-32" />
+        <Image
+          src={assets.profile_img}
+          alt="Abdullah Masum"
+          className="w-36 rounded-full md:w-40"
+        />
       </motion.div>
+
       <motion.h3
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.3 }}
-        className="flex items-center gap-2 text-xl md:text-2xl mb-3 font-Ovo"
+        className="mb-2 flex items-center gap-2 font-Ovo text-xl md:text-2xl"
       >
-        Hi! I'm Abdullah Al Masum{" "}
+        Hi! I&apos;m Abdullah Al Masum
         <Image src={assets.hand_icon} alt="" className="w-6" />
       </motion.h3>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="mb-2 rounded-full border border-pink-400/30 px-4 py-2 text-sm text-pink-500 dark:text-pink-400"
+      >
+        Available for Freelance & Contract Work
+      </motion.div>
 
       <motion.h1
         initial={{ y: -30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo"
+        className="font-Ovo text-4xl sm:text-6xl lg:text-[66px]"
       >
-        full-stack web developer
+        Building Modern Web Applications
       </motion.h1>
+
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.7 }}
-        className="max-w-2xl mx-auto font-Ovo"
+        className="mx-auto max-w-2xl font-Ovo text-base leading-8 md:text-lg"
       >
-        I build fast, modern web apps with React, Next.js & Node.js — with 15+
-        projects deployed on Vercel, Netlify & GitHub.
+        I build modern web applications, SaaS platforms, dashboards, and
+        marketplaces using Next.js, React, MongoDB, Express.js, and scalable
+        backend architecture.
       </motion.p>
 
-      <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
+      <div className="mt-4 flex flex-col items-center gap-4 sm:flex-row">
         <motion.a
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 1 }}
           href="#contact"
-          className="px-10 py-3 border rounded-full border-white bg-black text-white flex items-center gap-2 dark:bg-transparent"
+          className="flex items-center gap-2 rounded-full border border-white bg-black px-10 py-3 text-white dark:bg-transparent"
         >
-          Contact me{" "}
+          Start a Project
           <Image src={assets.right_arrow_white} alt="" className="w-4" />
         </motion.a>
 
@@ -57,12 +74,11 @@ const Header = () => {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-
           href="/Abdullah-Al-Masum-Resume.pdf"
           download
-          className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black"
+          className="flex items-center gap-2 rounded-full border border-gray-500 bg-white px-10 py-3 dark:text-black"
         >
-          My resume
+          Download Resume
           <Image src={assets.download_icon} alt="" className="w-4" />
         </motion.a>
       </div>
